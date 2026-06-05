@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Kargbo | IT Infrastructure Specialist</title>
+    <style>
+        :root {
+            --bg: #050a10;
+            --panel: #0d1624;
+            --accent: #00f2ff;
+            --accent-dim: rgba(0, 242, 255, 0.2);
+            --text: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Courier New', Courier, monospace; }
+        body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+
+        #network-canvas {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; opacity: 0.3;
+        }
+
+        nav { padding: 1.5rem; display: flex; justify-content: space-between; background: rgba(13, 22, 36, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--accent-dim); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+        /* --- New Photo Area --- */
+        .hero-layout { display: flex; align-items: center; gap: 3rem; min-height: 80vh; }
+        .profile-container {
+            width: 280px; height: 370px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            padding: 10px;
+            box-shadow: 0 0 30px var(--accent-dim);
+            flex-shrink: 0;
+        }
+        .profile-container img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: grayscale(40%);
+        }
+
+        .hero-text h1 { font-size: 3.5rem; text-transform: uppercase; margin: 1rem 0; color: white; }
+        .hero-text span { color: var(--accent); }
+
+        /* --- Buttons --- */
+        .btn-group { display: flex; gap: 1rem; margin-top: 2rem; }
+        .btn {
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 1px solid var(--accent);
+            cursor: pointer;
+        }
+        .btn-primary { background: var(--accent); color: var(--bg); }
+        .btn-outline { color: var(--accent); background: transparent; }
+        .btn:hover { box-shadow: 0 0 15px var(--accent); transform: translateY(-2px); }
+
+        section { margin-bottom: 6rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { 
+            background: var(--panel); padding: 2rem; 
+            border-radius: 8px; border: 1px solid var(--accent-dim);
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--accent); }
+        .card h3 { color: var(--accent); margin-bottom: 0.5rem; }
+
+        .referee-card { font-size: 0.85rem; border-top: 2px solid var(--accent); padding-top: 1rem; }
+
+        @media (max-width: 768px) {
+            .hero-layout { flex-direction: column; text-align: center; }
+            .hero-text h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="network-canvas"></canvas>
+
+    <nav>
+        <div style="color: var(--accent);">[SYS_ADMIN: D. KARGBO]</div>
+        <div id="clock">00:00:00</div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-layout">
+            <div class="profile-container">
+                <img src="David_pic.jpeg" alt="David Kabileh Orlando Kargbo">
+            </div>
+            <div class="hero-text">
+                <p style="color: var(--accent);">> Handshake Protocol Verified...</p>
+                <h1>David Kabileh<br><span>Orlando Kargbo</span></h1>
+                <p>Sierra Leonean IT Specialist | Network Architecture & Infrastructure Management</p>
+                
+                <div class="btn-group">
+                    <a href="mailto:kargbodavid15@gmail.com" class="btn btn-primary">ESTABLISH CONNECTION</a>
+                    <a href="David_Kargbo_CV.pdf" download class="btn btn-outline">DOWNLOAD_CV.exe</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 2rem; border-bottom: 1px solid var(--accent-dim);">// CORE_COMPETENCIES</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Infrastructure</h3>
+                    <p>Experienced in planning, designing, and implementing robust I.T infrastructure.</p>
+                </div>
+                <div class="card">
+                    <h3>Network Admin</h3>
+                    <p>Proficient in protocols, routing, switching, and hardware troubleshooting.</p>
+                </div>
+                <div class="card">
+                    <h3>Systems Admin</h3>
+                    <p>Experienced in managing Windows environments, installation, and maintenance.</p>
+                </div>
+                <div class="card">
+                    <h3>Support Operations</h3>
+                    <p>Proven track record in helpdesk operations and I.T service management.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 2rem; border-bottom: 1px solid var(--accent-dim);">// OPERATIONAL_HISTORY</h2>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>Field Network Engineer | Onlime Sierra Leone Limited</h4>
+                <p style="color: var(--accent);">2023 - Present</p>
+            </div>
+            <div class="card" style="margin-bottom: 1rem;">
+                <h4>ICT Officer | Institute of Sierra Leonean Languages</h4>
+                <p style="color: var(--accent);">2020 - 2022</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 2rem; border-bottom: 1px solid var(--accent-dim);">// VERIFIED_REFEREES</h2>
+            <div class="grid">
+                <div class="card referee-card">
+                    <p><strong>Lamin Henry Kargbo</strong></p>
+                    <p>Program Director (ISLL)</p>
+                    <p>Tel: +23276717810</p>
+                </div>
+                <div class="card referee-card">
+                    <p><strong>Rev. Frank Sima Turay</strong></p>
+                    <p>Director, Olympic SL</p>
+                    <p>Tel: +23277611420p>
+                </div>
+                <div class="card referee-card">
+                    <p><strong>Foday Mansaray</strong></p>
+                    <p>Software Developer</p>
+                   <p>Tel: +23272214509</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Clock Function
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+
+        // Particle Background
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function init() {
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        }
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.speedX = (Math.random() - 0.5) * 1.5;
+                this.speedY = (Math.random() - 0.5) * 1.5;
+            }
+            update() {
+                this.x += this.speedX; this.y += this.speedY;
+                if(this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if(this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = '#00f2ff';
+                ctx.beginPath(); ctx.arc(this.x, this.y, 2, 0, Math.PI * 2); ctx.fill();
+            }
+        }
+        function animate() {
+            ctx.clearRect(0,0,canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        window.addEventListener('resize', init);
+        init();
+        for(let i=0; i<80; i++) particles.push(new Particle());
+        animate();
+    </script>
+</body>
+</html>
